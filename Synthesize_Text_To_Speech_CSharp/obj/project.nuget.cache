@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "OUgUwU0/BdHs/k8THTikqumT4Oka3v3kXavUuEoskAgDtn7FGKs1zH+jJLKTnfKwpGaJMVtVlEE/jUfsPeNIXA==",
+  "success": true,
+  "projectFilePath": "D:\\VSCode-Workspace\\Synthesize_Text_To_Speech_CSharp\\Synthesize_Text_To_Speech_CSharp.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\tcins\\.nuget\\packages\\microsoft.cognitiveservices.speech\\1.15.0\\microsoft.cognitiveservices.speech.1.15.0.nupkg.sha512"
+  ],
+  "logs": []
+}

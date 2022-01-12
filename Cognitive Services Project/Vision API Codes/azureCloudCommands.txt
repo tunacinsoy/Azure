@@ -1,0 +1,40 @@
+-- This text file contains several Azure PowerShell commands for various purposes.
+-- Author: Tuna Cinsoy
+-- Last Modification: 26.02.21
+
+-- View Image Attributes
+curl "https://westeurope.api.cognitive.microsoft.com/vision/v2.0/analyze?visualFeatures=Categories,Description&details=Landmarks" \
+-H "Ocp-Apim-Subscription-Key: $key" \
+-H "Content-Type: application/json" \
+-d "{'url' : 'https://cdn.mos.cms.futurecdn.net/ntFmJUZ8tw3ULD3tkBaAtf.jpg'}" \
+| jq '.'
+
+-- View Mature Content Statistics of an Image
+curl "https://westeurope.api.cognitive.microsoft.com/vision/v2.0/analyze?visualFeatures=Adult,Description" \
+-H "Ocp-Apim-Subscription-Key: $key" \
+-H "Content-Type: application/json" \
+-d "{'url' : 'https://merriam-webster.com/assets/mw/images/article/art-wap-landing-mp-lg/family-of-four-7101-a234e9249b2c7223d4e4d8cd9432f9e9@1x.jpg'}" \
+| jq '.'
+
+-- Get Thumbnail of an image
+curl "https://westeurope.api.cognitive.microsoft.com/vision/v2.0/generateThumbnail?width=100&height=100&smartCropping=true" \
+-H "Ocp-Apim-Subscription-Key: $key" \
+-H "Content-Type: application/json" \
+-d "{'url' : 'https://www.cdc.gov/healthypets/images/pets/cute-dog-headshot.jpg'}" \
+-o  thumbnail.jpg
+
+-- Use OCR to retrieve a text from an image
+curl "https://westeurope.api.cognitive.microsoft.com/vision/v2.0/ocr" \
+-H "Ocp-Apim-Subscription-Key: $key" \
+-H "Content-Type: application/json"  \
+-d "{'url' : 'https://images-na.ssl-images-amazon.com/images/I/61ZKNw0xixL.jpg'}" \
+ | jq '.'
+
+-- Use OCR to retrieve a handwritten text from an image
+curl "https://westeurope.api.cognitive.microsoft.com/vision/v2.0/recognizeText?mode=Handwritten" \
+-H "Ocp-Apim-Subscription-Key: $key" \
+-H "Content-Type: application/json" \
+-d "{'url' : 'https://raw.githubusercontent.com/MicrosoftDocs/mslearn-process-images-with-the-computer-vision-service/master/images/handwriting.jpg'}" \
+-D -
+
+curl -H "Ocp-Apim-Subscription-Key: $key" "https://westeurope.api.cognitive.microsoft.com/vision/v2.0/textOperations/fad8f95a-85bb-49fd-a309-a8e9ad013080" | jq '.'

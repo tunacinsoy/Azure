@@ -1,0 +1,11 @@
+md az204-auth
+cd az204-auth
+
+dotnet new console
+
+code . -r
+
+dotnet add package Microsoft.Identity.Client
+
+dotnet build
+dotnet run

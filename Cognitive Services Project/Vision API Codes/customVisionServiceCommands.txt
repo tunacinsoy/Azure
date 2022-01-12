@@ -1,0 +1,31 @@
+-- This text file contains Azure Cloud Shell commands to execute Custom Vision Service
+-- Author: Tuna Cinsoy
+-- Last Modified: 26.02.21
+
+-- Test of Laviva
+curl https://northeurope.api.cognitive.microsoft.com/customvision/v3.0/Prediction/36272758-d942-4b81-b814-5bd5f9fd3793/classify/iterations/Iteration1/url \
+-H "Prediction-Key: 9201336dd6374e2282225c647694307e" \
+-H "Content-Type: application/json" \
+-d "{'url' : 'https://galeri13.uludagsozluk.com/702/laviva_2095117_m.jpg'}" \
+| jq '.'
+
+--Test of Karam
+curl https://northeurope.api.cognitive.microsoft.com/customvision/v3.0/Prediction/36272758-d942-4b81-b814-5bd5f9fd3793/classify/iterations/Iteration1/url \
+-H "Prediction-Key: 9201336dd6374e2282225c647694307e" \
+-H "Content-Type: application/json" \
+-d "{'url' : 'http://2.bp.blogspot.com/-WfsapTSaNCI/UPMR2mQ47eI/AAAAAAAABEc/nnQvOnvXrtg/s1600/etiKaram1.JPG'}" \
+| jq '.'
+
+-- Test of Godiva (which is not included in training)
+curl https://northeurope.api.cognitive.microsoft.com/customvision/v3.0/Prediction/36272758-d942-4b81-b814-5bd5f9fd3793/classify/iterations/Iteration1/url \
+-H "Prediction-Key: 9201336dd6374e2282225c647694307e" \
+-H "Content-Type: application/json" \
+-d "{'url' : 'https://img-ozdilek.mncdn.com/images/catalog/646x1000/8690504153757.jpg'}" \
+| jq '.'
+
+-- Test of a sample flower
+curl https://northeurope.api.cognitive.microsoft.com/customvision/v3.0/Prediction/36272758-d942-4b81-b814-5bd5f9fd3793/classify/iterations/Iteration1/url \
+-H "Prediction-Key: 9201336dd6374e2282225c647694307e" \
+-H "Content-Type: application/json" \
+-d "{'url' : 'https://images.pexels.com/photos/736230/pexels-photo-736230.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500'}" \
+| jq '.'

@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "FgQnbYJn8Np7rujOMF6nl2Y9hoEegE2A5jN/0rUU1HAvon7f+Vjk6vJEDt82gfOvcA1a7o8a7zX6GMXl/Gsi9g==",
+  "success": true,
+  "projectFilePath": "D:\\VSCode-Workspace\\Translate_Speech_CSharp\\Translate_Speech_CSharp.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\tcins\\.nuget\\packages\\microsoft.cognitiveservices.speech\\1.15.0\\microsoft.cognitiveservices.speech.1.15.0.nupkg.sha512"
+  ],
+  "logs": []
+}
