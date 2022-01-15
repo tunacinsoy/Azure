@@ -3,7 +3,7 @@ using System.Threading.Tasks;
 
 public class Program
 {
-    static string connectionString = "az204redis21202.redis.cache.windows.net:6380,password=7lO6XPzYgMg6qMQ93vQPgjlAlI0PRUOVaAzCaHBN1I8=,ssl=True,abortConnect=False";
+    static string connectionString = "";
 
     static async Task Main(string[] args)
     {
